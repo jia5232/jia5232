@@ -1,7 +1,7 @@
 ### Welcome to My github! 😄
 
 ##### 🌱 I’m currently learning about computer science
-
+##### 💬 https://blog.naver.com/jia5232
 <!--
 **jia5232/jia5232** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
