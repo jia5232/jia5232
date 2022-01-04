@@ -1,4 +1,6 @@
-### Hi there 👋
+### Welcome My github! 😄
+
+##### 🌱 I’m currently learning about computer science
 
 <!--
 **jia5232/jia5232** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
