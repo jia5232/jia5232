@@ -1,4 +1,4 @@
-### Welcome My github! 😄
+### Welcome to My github! 😄
 
 ##### 🌱 I’m currently learning about computer science
 
