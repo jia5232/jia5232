@@ -1,6 +1,6 @@
 ### Welcome to My github! 😄
 
-##### 🌱 I’m currently learning about computer science
+##### 🌱 I’m majoring in computer science
 ##### 💬 You can see me on the blog. https://star-peanuts.tistory.com/
 <!--
 **jia5232/jia5232** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
