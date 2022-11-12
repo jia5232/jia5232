@@ -1,5 +1,5 @@
 <div align=center>
-	<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Jia%20Github!&fontSize=90" />	
+	<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=Jia's%20Github!&fontSize=90" />	
 </div>
 <div align=center>
   <p> Welcome to My github😄 My name is Jia and I’m majoring in computer science at kookmin univ.🏫</p>
