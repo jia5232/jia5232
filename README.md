@@ -6,12 +6,14 @@
 	<p>✨ Platforms & Languages ✨</p>
 </div>
 <div align="center">
-  <img src="https://img.shields.io/badge/python-3776AB?style=flat&logo=python&logoColor=white" />
 	<img src="https://img.shields.io/badge/Java-007396?style=flat&logo=Conda-Forge&logoColor=white" />
+	<img src="https://img.shields.io/badge/python-3776AB?style=flat&logo=python&logoColor=white" />
+	<img src="https://img.shields.io/badge/Dart-0175C2?style=flat&logo=Dart&logoColor=white" />
 	<br>
-	<img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=Django&logoColor=white" />
 	<img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=Spring&logoColor=green" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" />
+	<img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=Django&logoColor=white" />
+	<img src="https://img.shields.io/badge/Flutter-02569B?style=flat&logo=Flutter&logoColor=white" />
+  	<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=MySQL&logoColor=white" />
 </div>
 <br>
 <div align=center>
