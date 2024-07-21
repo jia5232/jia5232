@@ -30,11 +30,13 @@ jobs:
       run: |
         python main.py
     - name: Update README.md file
-      run: | 
+      run: |
         git pull
         git add .
-        git diff
-        git config --local user.email "jia5232@naver.com"
-        git config --local user.name "jia5232"
-        git commit -m "Updating Blog Posts"
-        git push
+        if ! git diff --quiet; then
+          git config --local user.email "jia5232@naver.com"
+          git config --local user.name "jia5232"
+          git commit -m "Updating Blog Posts"
+          git push
+        else
+          echo "No changes to commit"
