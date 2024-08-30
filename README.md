@@ -1,6 +1,6 @@
 
 <div align=start>
-  <p> Welcome to My github😄 <br>My name is Jia and I’m majoring in computer science at kookmin univ.🏫</p>
+  <p> Welcome to My github😄 <br>I’m majoring in computer science!</p>
 </div>
 
 ## ✨ Platforms & Languages
