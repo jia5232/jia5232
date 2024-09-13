@@ -1,7 +1,13 @@
-import feedparser, time
+import feedparser
+import time
+import requests
 
 URL = "https://star-peanuts.tistory.com/rss"
-RSS_FEED = feedparser.parse(URL)
+# HTTP 요청을 통해 최신 데이터를 가져오기, 캐시 방지
+headers = {'Cache-Control': 'no-cache'}
+response = requests.get(URL, headers=headers)
+RSS_FEED = feedparser.parse(response.content)
+
 MAX_POST = 7
 
 markdown_text = """
@@ -34,12 +40,24 @@ markdown_text = """
 
 """  # list of blog posts will be appended here
 
-for idx, feed in enumerate(RSS_FEED['entries']):
-    if idx >= MAX_POST:
-        break
-    else:
-        feed_date = feed['published_parsed']
-        markdown_text += f"[{time.strftime('%Y/%m/%d', feed_date)} - {feed['title']}]({feed['link']}) <br/>\n<br/>\n"
+# 피드 데이터가 비어있을 경우의 처리 추가
+if 'entries' in RSS_FEED:
+    for idx, feed in enumerate(RSS_FEED['entries']):
+        if idx >= MAX_POST:
+            break
+        else:
+            feed_date = feed.get('published_parsed')
+            # 'published_parsed'가 없을 경우 처리
+            if feed_date:
+                formatted_date = time.strftime('%Y/%m/%d', feed_date)
+            else:
+                formatted_date = 'Unknown Date'
 
+            title = feed.get('title', 'No Title')
+            link = feed.get('link', '#')
+
+            markdown_text += f"[{formatted_date} - {title}]({link}) <br/>\n<br/>\n"
+
+# 변경된 README 파일에 쓰기
 with open("README.md", mode="w", encoding="utf-8") as f:
     f.write(markdown_text)
