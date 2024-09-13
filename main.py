@@ -1,9 +1,9 @@
+# main.py 파일
 import feedparser
 import time
 import requests
 
 URL = "https://star-peanuts.tistory.com/rss"
-# HTTP 요청을 통해 최신 데이터를 가져오기, 캐시 방지
 headers = {'Cache-Control': 'no-cache'}
 response = requests.get(URL, headers=headers)
 RSS_FEED = feedparser.parse(response.content)
@@ -58,6 +58,14 @@ if 'entries' in RSS_FEED:
 
             markdown_text += f"[{formatted_date} - {title}]({link}) <br/>\n<br/>\n"
 
-# 변경된 README 파일에 쓰기
-with open("README.md", mode="w", encoding="utf-8") as f:
-    f.write(markdown_text)
+# 기존 README 파일의 내용을 읽어옵니다.
+try:
+    with open("README.md", "r", encoding="utf-8") as f:
+        old_content = f.read()
+except FileNotFoundError:
+    old_content = ""
+
+# 새로운 내용이 기존 내용과 다를 때만 업데이트
+if markdown_text != old_content:
+    with open("README.md", "w", encoding="utf-8") as f:
+        f.write(markdown_text)
